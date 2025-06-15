@@ -1,0 +1,18 @@
+{
+  "name": "coming-soon-server",
+  "version": "1.0.0",
+  "description": "A simple Express server to serve a dark-themed coming soon page",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

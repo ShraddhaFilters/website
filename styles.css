@@ -1,0 +1,141 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  animation: float 10s infinite ease-in-out;
+  border-radius: 8px;
+}
+
+.shape1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.shape2 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 10%;
+  animation-delay: 2s;
+}
+
+.shape3 {
+  width: 80px;
+  height: 80px;
+  top: 30%;
+  left: 75%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(45deg);
+  }
+}
+
+.container {
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f5f5f5;
+}
+
+p {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+input {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #1e1e1e;
+  color: #fff;
+}
+
+button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #5a5aff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #7777ff;
+}
+
+/* Responsive tweaks */
+@media (min-width: 600px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  input {
+    flex: 1;
+  }
+
+  button {
+    margin-left: 0.5rem;
+  }
+}
